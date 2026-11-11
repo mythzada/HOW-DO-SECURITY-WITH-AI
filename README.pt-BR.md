@@ -31,6 +31,7 @@ Este repositório é o caderno de campo de um projeto real: um SaaS jurídico br
 | [06-METODOS-DE-SEGURANCA.md](06-METODOS-DE-SEGURANCA.md) | **Catálogo completo** dos métodos de segurança aplicados num sistema real |
 | [07-FERRAMENTAS-DE-IA.md](07-FERRAMENTAS-DE-IA.md) | Strix + skill de auditoria da Cloudflare + nossas skills: instalação, uso seguro e ordem |
 | [08-DO-ATAQUE-A-DEFESA.md](08-DO-ATAQUE-A-DEFESA.md) | Cada tema de ataque (recon, Nmap, SQLi, XSS, LFI, upload, escalada, pivoting, IDOR, SSRF) → como se defender |
+| [09-AUDITORIA-COMPLETA.md](09-AUDITORIA-COMPLETA.md) | **Auditoria completa em 14 etapas** (SQLi, IDOR, XSS, sessão/2FA, SSRF, upload, ReDoS, segredos, pagamentos, IA, LGPD, borda) feita pela skill |
 | [CHECKLIST.md](CHECKLIST.md) | Checklist resumido para aplicar em qualquer projeto |
 
 ---
@@ -66,14 +67,18 @@ Este repositório é o caderno de campo de um projeto real: um SaaS jurídico br
 Cole no terminal do seu projeto:
 
 ```
+npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill construir-seguro-por-padrao
+npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill auditoria-completa-em-etapas
 npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill metodologia-seguranca-com-ia
 npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill auditoria-passiva-dominio
 ```
 
-Prefere respostas em inglês? Use `secure-ai-methodology` e `passive-domain-audit`.
+Prefere respostas em inglês? Use `secure-by-default`, `full-security-audit`, `secure-ai-methodology` e `passive-domain-audit`.
 
 | Skill | O que faz |
 |---|---|
+| **construir-seguro-por-padrao** | Qualquer app que você criar com IA (até "vibe code") já nasce seguro: receita obrigatória por recurso (banco, login, sessão, 2FA, upload, pagamento, IA, admin) com o teste de segurança de cada um, e portão que não deixa dizer "pronto" sem prova |
+| **auditoria-completa-em-etapas** | Audita um sistema que já existe em 14 etapas, na cópia local: SQL injection, IDOR, XSS e sanitização, login/2FA, CSRF/redirect, SSRF, upload, ReDoS, segredos, pagamentos, IA, dados pessoais, borda. Prova cada achado com teste e corrige um por vez |
 | **metodologia-seguranca-com-ia** | Faz o Claude Code trabalhar com você do jeito deste guia: ensina enquanto faz, defesa em camadas, PR com teste e revisão de segurança, e traz o **kit completo** (catálogo deste guia, skill de auditoria da Cloudflare, Strix na cópia local, auditoria passiva). Nada de "vibe code" sem verificação |
 | **auditoria-passiva-dominio** | Audita o seu domínio como um atacante faria no reconhecimento (DNS, e-mail, TLS, cabeçalhos, subdomínios, arquivos expostos), só com comandos passivos, e explica cada achado em português |
 

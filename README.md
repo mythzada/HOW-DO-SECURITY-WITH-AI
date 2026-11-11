@@ -31,6 +31,7 @@ This repository is the field notebook of a real project: a Brazilian legal SaaS 
 | [EN-06-SECURITY-METHODS.md](EN-06-SECURITY-METHODS.md) | [06-METODOS-DE-SEGURANCA.md](06-METODOS-DE-SEGURANCA.md) | **Full catalog** of security methods applied in a real system |
 | [EN-07-AI-SECURITY-TOOLS.md](EN-07-AI-SECURITY-TOOLS.md) | [07-FERRAMENTAS-DE-IA.md](07-FERRAMENTAS-DE-IA.md) | Strix + Cloudflare audit skill + our skills: install, safe use, order |
 | [EN-08-ATTACK-TO-DEFENSE.md](EN-08-ATTACK-TO-DEFENSE.md) | [08-DO-ATAQUE-A-DEFESA.md](08-DO-ATAQUE-A-DEFESA.md) | Every attack topic (recon, Nmap, SQLi, XSS, LFI, upload, privesc, pivoting, IDOR, SSRF) → how to defend |
+| [EN-09-FULL-AUDIT.md](EN-09-FULL-AUDIT.md) | [09-AUDITORIA-COMPLETA.md](09-AUDITORIA-COMPLETA.md) | **Full 14-stage audit** (SQLi, IDOR, XSS, session/2FA, SSRF, uploads, ReDoS, secrets, payments, AI, privacy, edge) run by the skill |
 | [EN-CHECKLIST.md](EN-CHECKLIST.md) | [CHECKLIST.md](CHECKLIST.md) | Short checklist for any project |
 
 ---
@@ -66,6 +67,8 @@ This repository is the field notebook of a real project: a Brazilian legal SaaS 
 Paste into your project terminal:
 
 ```
+npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill secure-by-default
+npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill full-security-audit
 npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill secure-ai-methodology
 npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill passive-domain-audit
 ```
@@ -73,12 +76,16 @@ npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill passi
 Prefer Portuguese answers? Use the `-pt` versions:
 
 ```
+npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill construir-seguro-por-padrao
+npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill auditoria-completa-em-etapas
 npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill metodologia-seguranca-com-ia
 npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill auditoria-passiva-dominio
 ```
 
 | Skill (EN / PT) | What it does |
 |---|---|
+| **secure-by-default** / construir-seguro-por-padrao | Any app you build with AI (even "vibe coded") is secure from birth: a mandatory recipe per feature (database, login, session, 2FA, uploads, payments, AI, admin) with its security test, and a gate that won't say "done" without proof |
+| **full-security-audit** / auditoria-completa-em-etapas | Audits an existing system in 14 stages on a local copy: SQL injection, IDOR, XSS and sanitization, login/2FA, CSRF/redirects, SSRF, uploads, ReDoS, secrets, payments, AI, personal data, edge. Proves every finding with a test and fixes one at a time |
 | **secure-ai-methodology** / metodologia-seguranca-com-ia | Makes Claude Code work with you the way this guide does: teaches while doing, defense in layers, every change with tests, security review and rollback — and brings the **full kit** (this guide's catalog, Cloudflare audit skill, Strix on a local copy, passive domain audit). No unverified "vibe code" |
 | **passive-domain-audit** / auditoria-passiva-dominio | Audits your domain the way an attacker would in recon (DNS, email, TLS, headers, subdomains, exposed files), passive commands only, explaining each finding |
 

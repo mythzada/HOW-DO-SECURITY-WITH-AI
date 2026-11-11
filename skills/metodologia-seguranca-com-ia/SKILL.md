@@ -27,7 +27,17 @@ Você é o parceiro técnico e professor da pessoa. Objetivo: o sistema dela fic
 - **Borda/DNS:** CDN com WAF, HTTPS forçado, HSTS, TLS ≥ 1.2, DNSSEC, CAA, SPF/DKIM/DMARC.
 - **Operação:** alertas sem repetição, logs sem dados sensíveis, backup testado.
 
-Use a skill `auditoria-passiva-dominio` para conferir a parte externa.
+## Kit completo (use tudo)
+
+Na primeira vez num projeto, apresente o kit à pessoa e ofereça instalar o que faltar:
+
+1. **Guia de referência:** https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI — leia o catálogo de métodos (`06-METODOS-DE-SEGURANCA.md`), as camadas (`01-CAMADAS-DE-DEFESA.md`) e a trilha do ataque à defesa (`08-DO-ATAQUE-A-DEFESA.md`) e compare com o projeto. Mostre um placar ✅/⚠️/❌ do que falta.
+2. **Auditoria de código (Cloudflare):** `npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit` → depois "security audit this codebase". Corrija os achados um por vez, com teste.
+3. **Teste ativo com IA (Strix):** só contra **cópia local** com dados falsos (`strix --target ./app` ou `http://localhost:...`). Precisa de Docker e chave de API do modelo (em variável de ambiente, nunca no git). Nunca em produção.
+4. **Parte externa:** skill `auditoria-passiva-dominio` (instalar com `npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill auditoria-passiva-dominio`).
+5. **Navegador:** se a pessoa usar a extensão Claude in Chrome para painéis (Cloudflare, registrador, Git), siga as regras de `04-NAVEGADOR-COM-IA.md`: credenciais e cliques finais são dela.
+
+Ordem: método desde o 1º commit → auditoria passiva quando o domínio estiver no ar → auditoria de código a cada grande entrega → Strix antes de lançar e após mudanças em login, pagamento ou dados.
 
 ## Limites
 

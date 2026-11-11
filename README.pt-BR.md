@@ -28,6 +28,9 @@ Este repositório é o caderno de campo de um projeto real: um SaaS jurídico br
 | [03-METODOLOGIA-AGENTES-IA.md](03-METODOLOGIA-AGENTES-IA.md) | Como coordenar vários agentes de IA (código, segurança, front, explicação) sem bagunça |
 | [04-NAVEGADOR-COM-IA.md](04-NAVEGADOR-COM-IA.md) | Usar uma extensão de IA no Chrome para tarefas manuais em painéis, com regras de segurança |
 | [05-TRILHA-DE-ESTUDO.md](05-TRILHA-DE-ESTUDO.md) | O que estudar, em que ordem, e onde |
+| [06-METODOS-DE-SEGURANCA.md](06-METODOS-DE-SEGURANCA.md) | **Catálogo completo** dos métodos de segurança aplicados num sistema real |
+| [07-FERRAMENTAS-DE-IA.md](07-FERRAMENTAS-DE-IA.md) | Strix + skill de auditoria da Cloudflare + nossas skills: instalação, uso seguro e ordem |
+| [08-DO-ATAQUE-A-DEFESA.md](08-DO-ATAQUE-A-DEFESA.md) | Cada tema de ataque (recon, Nmap, SQLi, XSS, LFI, upload, escalada, pivoting, IDOR, SSRF) → como se defender |
 | [CHECKLIST.md](CHECKLIST.md) | Checklist resumido para aplicar em qualquer projeto |
 
 ---
@@ -67,9 +70,11 @@ npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill metod
 npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill auditoria-passiva-dominio
 ```
 
+Prefere respostas em inglês? Use `secure-ai-methodology` e `passive-domain-audit`.
+
 | Skill | O que faz |
 |---|---|
-| **metodologia-seguranca-com-ia** | Faz o Claude Code trabalhar com você do jeito deste guia: ensina enquanto faz, defesa em camadas, PR com teste e revisão de segurança, nada de "vibe code" sem verificação |
+| **metodologia-seguranca-com-ia** | Faz o Claude Code trabalhar com você do jeito deste guia: ensina enquanto faz, defesa em camadas, PR com teste e revisão de segurança, e traz o **kit completo** (catálogo deste guia, skill de auditoria da Cloudflare, Strix na cópia local, auditoria passiva). Nada de "vibe code" sem verificação |
 | **auditoria-passiva-dominio** | Audita o seu domínio como um atacante faria no reconhecimento (DNS, e-mail, TLS, cabeçalhos, subdomínios, arquivos expostos), só com comandos passivos, e explica cada achado em português |
 
 ---
@@ -87,11 +92,7 @@ npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill audit
 
 ## 🛣️ Próximos guias
 
-- [ ] Authenticated Origin Pulls (mTLS entre CDN e servidor)
-- [ ] Cloudflare Access / Zero Trust para áreas administrativas
-- [ ] Laboratório local: Nmap, Netcat e agentes de pentest contra uma cópia do seu sistema
-- [ ] Monitoramento e resposta a incidentes
-- [ ] Mais skills
+Siga a trilha do ataque à defesa em [08](08-DO-ATAQUE-A-DEFESA.md): cada 🔜 vira um guia aqui conforme estudamos e aplicamos. Também vêm aí: Authenticated Origin Pulls, Zero Trust na área administrativa, laboratório local de pentest, monitoramento e resposta a incidentes.
 
 Contribuições são bem-vindas: abra uma issue ou PR.
 

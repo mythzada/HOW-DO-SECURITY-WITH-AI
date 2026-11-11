@@ -28,6 +28,9 @@ This repository is the field notebook of a real project: a Brazilian legal SaaS 
 | [EN-03-AI-AGENTS-METHODOLOGY.md](EN-03-AI-AGENTS-METHODOLOGY.md) | [03-METODOLOGIA-AGENTES-IA.md](03-METODOLOGIA-AGENTES-IA.md) | Coordinating several AI agents (code, security, front-end, explainer) without chaos |
 | [EN-04-AI-IN-THE-BROWSER.md](EN-04-AI-IN-THE-BROWSER.md) | [04-NAVEGADOR-COM-IA.md](04-NAVEGADOR-COM-IA.md) | Using an AI Chrome extension for manual panel work, with safety rules |
 | [EN-05-STUDY-PATH.md](EN-05-STUDY-PATH.md) | [05-TRILHA-DE-ESTUDO.md](05-TRILHA-DE-ESTUDO.md) | What to study, in which order, and where |
+| [EN-06-SECURITY-METHODS.md](EN-06-SECURITY-METHODS.md) | [06-METODOS-DE-SEGURANCA.md](06-METODOS-DE-SEGURANCA.md) | **Full catalog** of security methods applied in a real system |
+| [EN-07-AI-SECURITY-TOOLS.md](EN-07-AI-SECURITY-TOOLS.md) | [07-FERRAMENTAS-DE-IA.md](07-FERRAMENTAS-DE-IA.md) | Strix + Cloudflare audit skill + our skills: install, safe use, order |
+| [EN-08-ATTACK-TO-DEFENSE.md](EN-08-ATTACK-TO-DEFENSE.md) | [08-DO-ATAQUE-A-DEFESA.md](08-DO-ATAQUE-A-DEFESA.md) | Every attack topic (recon, Nmap, SQLi, XSS, LFI, upload, privesc, pivoting, IDOR, SSRF) → how to defend |
 | [EN-CHECKLIST.md](EN-CHECKLIST.md) | [CHECKLIST.md](CHECKLIST.md) | Short checklist for any project |
 
 ---
@@ -76,7 +79,7 @@ npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill audit
 
 | Skill (EN / PT) | What it does |
 |---|---|
-| **secure-ai-methodology** / metodologia-seguranca-com-ia | Makes Claude Code work with you the way this guide does: teaches while doing, defense in layers, every change with tests, security review and rollback — no unverified "vibe code" |
+| **secure-ai-methodology** / metodologia-seguranca-com-ia | Makes Claude Code work with you the way this guide does: teaches while doing, defense in layers, every change with tests, security review and rollback — and brings the **full kit** (this guide's catalog, Cloudflare audit skill, Strix on a local copy, passive domain audit). No unverified "vibe code" |
 | **passive-domain-audit** / auditoria-passiva-dominio | Audits your domain the way an attacker would in recon (DNS, email, TLS, headers, subdomains, exposed files), passive commands only, explaining each finding |
 
 ---
@@ -94,11 +97,7 @@ npx skills add https://github.com/mythzada/HOW-DO-SECURITY-WITH-AI --skill audit
 
 ## 🛣️ Next guides
 
-- [ ] Authenticated Origin Pulls (mTLS between CDN and server)
-- [ ] Cloudflare Access / Zero Trust for admin areas
-- [ ] Local lab: Nmap, Netcat and pentest agents against a copy of your system
-- [ ] Monitoring and incident response
-- [ ] More skills
+Follow the attack-to-defense path in [EN-08](EN-08-ATTACK-TO-DEFENSE.md): every 🔜 there becomes a guide here as we study and apply it. Also coming: Authenticated Origin Pulls, Zero Trust for admin areas, a local pentest lab, monitoring and incident response.
 
 Contributions welcome: open an issue or PR.
 
